@@ -6,7 +6,7 @@
 
 <title>Анна — психолог</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,102 +17,111 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Inter',sans-serif;
+font-family:Inter,sans-serif;
+background:#f9f9fb;
 color:#2d2d2d;
-background:#f7f7fb;
-line-height:1.6;
+line-height:1.7;
 }
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
-}
-
-h1,h2{
-font-weight:600;
-}
-
-h2{
-font-size:32px;
-margin-bottom:30px;
-text-align:center;
-}
-
-p{
-color:#555;
+padding:80px 20px;
 }
 
 /* HERO */
 
 .hero{
-min-height:90vh;
+min-height:95vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:linear-gradient(135deg,#e8edf7,#f7f9fc);
+background:linear-gradient(140deg,#eef2f7,#fdfefe);
+padding:40px;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:10px;
+font-family:"Playfair Display",serif;
+font-size:56px;
+margin-bottom:15px;
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:25px;
+color:#555;
+margin-bottom:30px;
 }
 
 .button{
 display:inline-block;
-padding:14px 28px;
-background:#6c7ae0;
+padding:14px 30px;
+background:#6e7ff3;
 color:white;
-border-radius:30px;
+border-radius:40px;
 text-decoration:none;
 font-weight:500;
 transition:0.3s;
 }
 
 .button:hover{
-transform:translateY(-2px);
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* SERVICES */
+/* TITLES */
+
+h2{
+font-family:"Playfair Display",serif;
+font-size:36px;
+text-align:center;
+margin-bottom:40px;
+}
+
+/* CARDS */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
+gap:30px;
 }
 
 .card{
 background:white;
-padding:30px;
-border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+padding:35px;
+border-radius:18px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 /* ABOUT */
 
 .about{
-max-width:700px;
-margin:auto;
-text-align:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
 }
 
-/* PROCESS */
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.about p{
+color:#555;
+}
+
+/* STEPS */
 
 .steps{
 max-width:700px;
 margin:auto;
+font-size:18px;
 }
 
 .steps li{
@@ -123,7 +132,7 @@ margin-bottom:12px;
 
 .price{
 text-align:center;
-font-size:20px;
+font-size:22px;
 }
 
 /* CONTACT */
@@ -133,18 +142,32 @@ text-align:center;
 }
 
 .contact a{
-color:#6c7ae0;
+color:#6e7ff3;
 text-decoration:none;
 }
 
 /* FOOTER */
 
 footer{
-text-align:center;
+margin-top:60px;
 padding:30px;
-background:#eee;
+text-align:center;
+background:#f0f0f3;
 font-size:14px;
-margin-top:40px;
+}
+
+/* MOBILE */
+
+@media (max-width:800px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:42px;
+}
+
 }
 
 </style>
@@ -153,13 +176,22 @@ margin-top:40px;
 <body>
 
 <section class="hero">
+
 <div>
+
 <h1>Анна</h1>
+
 <p>Психолог • когнитивно-поведенческая терапия</p>
-<p>Помогаю справляться с тревогой, выгоранием и сложными жизненными периодами</p>
+
+<p>Помогаю справляться с тревогой, выгоранием  
+и сложными жизненными периодами</p>
+
 <a class="button" href="#contact">Записаться на консультацию</a>
+
 </div>
+
 </section>
+
 
 <section class="container">
 
@@ -168,15 +200,21 @@ margin-top:40px;
 <div class="grid">
 
 <div class="card">Тревога и панические атаки</div>
+
 <div class="card">Эмоциональное выгорание</div>
+
 <div class="card">Чувство вины и самокритика</div>
+
 <div class="card">Сложности в отношениях</div>
+
 <div class="card">Жизненные кризисы</div>
+
 <div class="card">Переживание утраты</div>
 
 </div>
 
 </section>
+
 
 <section class="container">
 
@@ -184,36 +222,48 @@ margin-top:40px;
 
 <div class="about">
 
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+
+<div>
+
 <p>
 Я практикующий психолог, работаю в когнитивно-поведенческом подходе.
-В работе для меня важно создать безопасное и поддерживающее пространство,
-где можно спокойно говорить о переживаниях и искать новые способы
-справляться с трудностями.
+В терапии для меня важно создать безопасное пространство,
+где можно честно говорить о переживаниях.
 </p>
 
 <br>
 
 <p>
-Использую методы с доказанной эффективностью и продолжаю
-профессиональное обучение.
+Использую методы с доказанной эффективностью
+и регулярно продолжаю профессиональное обучение.
 </p>
 
 </div>
 
+</div>
+
 </section>
+
 
 <section class="container">
 
 <h2>Как проходит консультация</h2>
 
 <ul class="steps">
-<li>знакомство и обсуждение запроса</li>
+
+<li>обсуждение запроса и ожиданий</li>
+
 <li>определение целей терапии</li>
+
 <li>работа с мыслями, эмоциями и поведением</li>
-<li>инструменты, которые можно применять в жизни</li>
+
+<li>практические инструменты для жизни</li>
+
 </ul>
 
 </section>
+
 
 <section class="container">
 
@@ -222,12 +272,15 @@ margin-top:40px;
 <div class="price">
 
 <p>Индивидуальная консультация — 50 минут</p>
+
 <p><strong>50 €</strong></p>
+
 <p>Формат: онлайн</p>
 
 </div>
 
 </section>
+
 
 <section class="container" id="contact">
 
@@ -236,8 +289,10 @@ margin-top:40px;
 <div class="contact">
 
 <p>Email: yourmail@email.com</p>
+
 <p>Telegram: @username</p>
-<p>WhatsApp: +00 000 000000</p>
+
+<p>WhatsApp: +00 000000</p>
 
 <br>
 
@@ -247,8 +302,11 @@ margin-top:40px;
 
 </section>
 
+
 <footer>
+
 © 2026 Анна • Психолог
+
 </footer>
 
 </body>
