@@ -3,94 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Анна — психолог</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial, sans-serif;
-line-height:1.6;
-color:#333;
-background:#fafafa;
+padding:0;
+box-sizing:border-box;
 }
 
-header{
-background:#6b8e8e;
-color:white;
-padding:80px 20px;
+body{
+font-family:'Inter',sans-serif;
+color:#2d2d2d;
+background:#f7f7fb;
+line-height:1.6;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+h1,h2{
+font-weight:600;
+}
+
+h2{
+font-size:32px;
+margin-bottom:30px;
 text-align:center;
 }
 
-header h1{
-margin:0;
-font-size:42px;
+p{
+color:#555;
 }
 
-header p{
+/* HERO */
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(135deg,#e8edf7,#f7f9fc);
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
 font-size:20px;
-margin:15px 0;
+margin-bottom:25px;
 }
 
 .button{
 display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:white;
-color:#6b8e8e;
+padding:14px 28px;
+background:#6c7ae0;
+color:white;
+border-radius:30px;
 text-decoration:none;
-border-radius:5px;
-font-weight:bold;
+font-weight:500;
+transition:0.3s;
 }
 
-section{
-padding:60px 20px;
-max-width:900px;
-margin:auto;
+.button:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
-h2{
-text-align:center;
-margin-bottom:30px;
-}
+/* SERVICES */
 
-.services{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
 }
 
 .card{
 background:white;
-padding:20px;
-border-radius:8px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+padding:30px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.3s;
 }
 
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* ABOUT */
+
 .about{
+max-width:700px;
+margin:auto;
 text-align:center;
+}
+
+/* PROCESS */
+
+.steps{
 max-width:700px;
 margin:auto;
 }
 
-.process li{
-margin-bottom:10px;
+.steps li{
+margin-bottom:12px;
 }
+
+/* PRICE */
 
 .price{
 text-align:center;
 font-size:20px;
 }
 
+/* CONTACT */
+
 .contact{
 text-align:center;
 }
 
+.contact a{
+color:#6c7ae0;
+text-decoration:none;
+}
+
+/* FOOTER */
+
 footer{
-background:#eee;
 text-align:center;
-padding:20px;
+padding:30px;
+background:#eee;
 font-size:14px;
+margin-top:40px;
 }
 
 </style>
@@ -98,98 +152,99 @@ font-size:14px;
 
 <body>
 
-<header>
+<section class="hero">
+<div>
 <h1>Анна</h1>
-<p>Психолог • Когнитивно-поведенческая терапия</p>
-<p>Помогаю справиться с тревогой, выгоранием и сложными жизненными периодами</p>
-<a class="button" href="#contact">Записаться</a>
-</header>
-
-<section>
-<h2>С чем я работаю</h2>
-
-<div class="services">
-
-<div class="card">
-Тревога и панические атаки
-</div>
-
-<div class="card">
-Эмоциональное выгорание
-</div>
-
-<div class="card">
-Чувство вины и самокритика
-</div>
-
-<div class="card">
-Сложности в отношениях
-</div>
-
-<div class="card">
-Переживание утраты
-</div>
-
-<div class="card">
-Стресс и жизненные кризисы
-</div>
-
+<p>Психолог • когнитивно-поведенческая терапия</p>
+<p>Помогаю справляться с тревогой, выгоранием и сложными жизненными периодами</p>
+<a class="button" href="#contact">Записаться на консультацию</a>
 </div>
 </section>
 
-<section>
+<section class="container">
+
+<h2>С чем я работаю</h2>
+
+<div class="grid">
+
+<div class="card">Тревога и панические атаки</div>
+<div class="card">Эмоциональное выгорание</div>
+<div class="card">Чувство вины и самокритика</div>
+<div class="card">Сложности в отношениях</div>
+<div class="card">Жизненные кризисы</div>
+<div class="card">Переживание утраты</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
 <h2>Обо мне</h2>
 
 <div class="about">
+
 <p>
 Я практикующий психолог, работаю в когнитивно-поведенческом подходе.
-В работе для меня важно создать безопасное пространство, где можно
-честно говорить о переживаниях и постепенно находить новые способы
+В работе для меня важно создать безопасное и поддерживающее пространство,
+где можно спокойно говорить о переживаниях и искать новые способы
 справляться с трудностями.
 </p>
 
+<br>
+
 <p>
-Работаю онлайн. Постоянно продолжаю профессиональное обучение
-и использую методы с доказанной эффективностью.
+Использую методы с доказанной эффективностью и продолжаю
+профессиональное обучение.
 </p>
+
 </div>
 
 </section>
 
-<section>
+<section class="container">
+
 <h2>Как проходит консультация</h2>
 
-<ul class="process">
-<li>Знакомство и обсуждение вашего запроса</li>
-<li>Определение целей работы</li>
-<li>Работа с мыслями, эмоциями и поведением</li>
-<li>Практические инструменты, которые можно применять в жизни</li>
+<ul class="steps">
+<li>знакомство и обсуждение запроса</li>
+<li>определение целей терапии</li>
+<li>работа с мыслями, эмоциями и поведением</li>
+<li>инструменты, которые можно применять в жизни</li>
 </ul>
 
 </section>
 
-<section>
+<section class="container">
+
 <h2>Стоимость</h2>
 
 <div class="price">
+
 <p>Индивидуальная консультация — 50 минут</p>
-<p><strong>Стоимость: 50 €</strong></p>
-<p>Формат: онлайн (Zoom / Google Meet)</p>
+<p><strong>50 €</strong></p>
+<p>Формат: онлайн</p>
+
 </div>
 
 </section>
 
-<section id="contact">
+<section class="container" id="contact">
+
 <h2>Контакты</h2>
 
 <div class="contact">
-<p>Запись на консультацию:</p>
 
-<p>Email: yourmail@example.com</p>
-<p>Telegram: @yourname</p>
+<p>Email: yourmail@email.com</p>
+<p>Telegram: @username</p>
 <p>WhatsApp: +00 000 000000</p>
 
+<br>
+
+<a class="button" href="#">Написать</a>
+
 </div>
+
 </section>
 
 <footer>
