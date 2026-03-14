@@ -17,8 +17,8 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:Inter,sans-serif;
-background:linear-gradient(140deg,#ffffff,#87BAC3);
-color:#2d2d2d;
+background:#F2F7F7;
+color:#2B2B2B;
 line-height:1.7;
 }
 
@@ -38,7 +38,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:linear-gradient(140deg,#3B9797,#ffffff);
+background:linear-gradient(to bottom,#F2F7F7,#DDEEEE);
 padding:40px;
 }
 
@@ -69,7 +69,7 @@ line-height:1.6;
 display:inline-block;
 margin-top:30px;
 padding:14px 32px;
-background:#6e7ff3;
+background:#3B9797;
 color:white;
 border-radius:40px;
 text-decoration:none;
@@ -77,17 +77,21 @@ transition:0.3s;
 }
 
 .button:hover{
+background:#2F7F7F;
 transform:translateY(-3px);
 box-shadow:0 12px 30px rgba(0,0,0,0.1);
 }
 
 /* заголовки */
 
-h2{
-font-family:"Playfair Display",serif;
-font-size:36px;
-text-align:center;
-margin-bottom:40px;
+h2::after{
+content:"";
+display:block;
+width:60px;
+height:3px;
+background:#3B9797;
+margin:12px auto 0;
+border-radius:2px;
 }
 
 /* карточки */
@@ -99,7 +103,8 @@ gap:30px;
 }
 
 .card{
-background:white;
+background:#ffffff;
+border:1px solid #E3F0F0;
 padding:35px;
 border-radius:18px;
 box-shadow:0 15px 40px rgba(0,0,0,0.05);
